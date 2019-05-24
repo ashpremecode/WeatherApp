@@ -221,7 +221,22 @@ letter-spacing: 1.3px;
 	font-size: 30px
 }
 
+#humidity-wind-container {
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	left: 0;
+}
 
+#humidity-wind-container {
+	position: relative;
+	vertical-align: middle;
+	top: -3px;
+}
+
+#humidity-wind-container > div span {
+	font-size: 18px;
+}
 
 
 
