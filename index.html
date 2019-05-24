@@ -17,7 +17,8 @@
 		<button id="open-menu-btn" class="ripple">
 			<img class="icon-sm-28" src="assets/images/icons/menu.png">
 		</button>
-		<!-- Current Weather Sextion -->
+
+		<!-- Main Panel -->
 		<section id="current-day-weather-containter">
 			<h1 class="location-label">Sydney</h1>
 			<div class="flex-container" id="temperature-summary-container">
@@ -27,19 +28,51 @@
 				<div>
 					<h1 id="degrees-label">20&#176;</h1>
 					<p id="summary-label">Clear Day</p>
-				</div>q
+				</div>
 			</div>
+			<!-- Current Weather Section -->
 			<div class="flex-container" id="humidity-wind-container">
+				<!-- Humidity -->
 				<div>
 					<img class="icon-sm-30" src="assets/images/icons/humidity.png" alt="">
 					<span>20%</span>
-				</div>	
+				</div>
+				<!-- Wind -->
 				<div>
 					<img class="icon-sm-30" src="assets/images/icons/wind-speed-flag.png" alt="">
 					<span>3m/h</span>
 				</div>
 			</div>
 		</section>
+
+		<!-- Lower Panel -->
+		<section class="lower-panel">
+			<button id="toggle-hourly-weather" class="ripple center_x">
+				<img src="assets/images/icons/up-arrow.png">
+			</button>
+
+		<!-- Lower Panel -->
+		<div id="daily-weather-wrapper" class="lower-panel-body">
+			<div class="flex-container weather-box current-day-of-the-week">
+				<div>
+					<h1>Sunday</h1>
+				</div>
+				<div class="flex-container">
+				<div>
+					<p>18&#176;</p>
+				</div>
+				<div>
+					<img class="icon-sm-30" src="assets/images/summary-icons/clear-day-white.png" alt="">
+				</div>
+				</div>
+			</div>
+
+			
+		</div>
+			
+		</section>
+
+
 	</main>
 	<script type="text/javascript" src="script/app.js"></script>
 </body>
