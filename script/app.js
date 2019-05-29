@@ -6,17 +6,42 @@ const UI = (function () {
 		document.querySelector("main").removeAttribute('hidden');
 
 	};
-
+	// hide app while showing loading screen
 	const loadApp = () => {
 		document.querySelector("#app-loader").classList.remove('display-none');
 		document.querySelector("main").setAttribute('hidden', true);
 	};
-
+	 // show menu
 	 const _showMenu = () => menu.style.right = 0;
+	 // hide menu
 	 const _hideMenu = () => menu.style.right = '-65%';
 
+	 const _toggleHourlyWeather = () => {
+	 	let hourlyWeather = document.querySelector("#hourly-weather-wrapper"),
+	 		arrow = document.querySelector("#toggle-hourly-weather").children[0],
+	 		visible = hourlyWeather.getAttribute('visible'),
+	 		dailyWeather = document.querySelector("#daily-weather-wrapper");
+
+	 		if (visible == "false") {
+	 			hourlyWeather.setAttribute('visible', 'true');
+	 			hourlyWeather.style.bottom = 0;
+	 			arrow.style.transform = "rotate(180deg)";
+	 			dailyWeather.style.opacity = 0;
+	 		} else if (visible == "true") {
+	 			hourlyWeather.setAttribute('visible', 'false');
+	 			hourlyWeather.style.bottom = '-100%';
+	 			arrow.style.transform = "rotate(0deg)";
+	 			dailyWeather.style.opacity = 1;
+	 		} else console.error("Error");
+
+	 };
+
+	 //menu events
 	 document.querySelector("#open-menu-btn").addEventListener('click', _showMenu);
 	 document.querySelector("#close-menu-btn").addEventListener('click', _hideMenu);
+
+	 // hourly weather wrapper event 
+	 document.querySelector("#toggle-hourly-weather").addEventListener('click', _toggleHourlyWeather);
 
 	return {
 		showApp,
@@ -25,6 +50,60 @@ const UI = (function () {
 
 
 })();
+
+//Get Location 
+
+const GETLOCATION = (function (){
+	let location;
+	const locationInput = document.querySelector("#location-input"),
+		addCityBtn = document.querySelector("#add-city-btn");
+
+	const _addCity = () => {
+		location = locationInput.value;
+		locationInput.value = "";
+		addCityBtn.setAttribute('disabled', 'true');
+		addCityBtn.classList.add('disabled');
+
+	}
+
+	locationInput.addEventListener('input', function(){
+		let inputText = this.value.trim();
+
+		if(inputText != ''){
+			addCityBtn.removeAttribute('disabled');
+			addCityBtn.classList.remove('disabled');
+		} else {
+			addCityBtn.setAttribute('disabled', 'true');
+			addCityBtn.classList.add('disabled');
+		}
+	});
+	addCityBtn.addEventListener('click',_addCity);
+
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //initialise
 
