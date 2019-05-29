@@ -9,7 +9,7 @@
     <title>Weather App</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/assets/images/icons/favicon96x96.ico" />
+    <link rel="shortcut icon" href="assets/images/icons/favicon96x96.ico" />
 
     <!-- Theme color -->
     <!-- Chrome, Firefox OS and Opera -->
@@ -32,9 +32,9 @@
 
 <body>
 
-    <div class="lds-dual-ring center display-none"></div>
+    <div id="app-loader" class="lds-dual-ring center"></div>
 
-    <main>
+    <main hidden>
         <button id="open-menu-btn" class="ripple">
             <img class="icon-sm-28" src="./assets/images/icons/menu.png" alt="">
         </button>
@@ -148,7 +148,7 @@
         </section>
 
     </main>
-    <script src="./scripts/index.js"></script>
+    <script src="script/app.js"></script>
 </body>
 
 </html>
