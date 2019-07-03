@@ -1,5 +1,7 @@
 # Weather App
 
+https://w3ath3r.herokuapp.com/index.html
+
 A weather application that allows user to enter their city and it will show the weather for the whole week.
 
 ### Motivation
@@ -10,10 +12,10 @@ I wanted to learn how to use API using javascript.
 ![](https://github.com/ashpremecode/WeatherApp/blob/master/assets/images/bg-images/screenshot.png)
 
 ### Built With
-HTML 
-CSS 
-JS
-DarkSky API
+HTML <br>
+CSS <br>
+JS <br>
+DarkSky API <br>
 OpenCage API
 
 Installation
